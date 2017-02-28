@@ -12,12 +12,20 @@ WaveSurfer.PlaylistParser = {
         }
 
         // parse playlist and set params
-        this.playlistFile = this.params.playlistFile || null;
+        this.playlistFileGET = this.params.playlistFile || null;
         this.playlistType = this.params.playlistType || null;
 
-        if (this.playlistFile != null) {
-            this.parse();
-        } else{
+        if (this.playlistFileGET != null) {
+            this.playlistFile = this.util.ajax({
+                url: this.playlistFileGET,
+                responseType: 'text'
+            })
+            if (this.playlistFile != null || this.playlistFile != 'undefined') {
+                this.parse();
+            } else {
+                throw new Error('Error reading the playlist file');
+            }
+        } else {
             throw new Error('No playlist file provided');
         }
     },
