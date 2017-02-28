@@ -1,2 +1,31 @@
 # playlist-parser
 JavaScript playlist parser for m3u, pls, smil and json files
+
+## How to use
+**Include the playlistparser.js javascript file**<br/>
+```
+HTML
+<script src="playlistparser.js"></script>
+
+PUG
+script(src="playlistparser.js")
+
+Haml
+%script{src: "playlistparser.js"}
+```
+
+**Call the playlist parser object**
+- FILE = link to one of the supported file types
+- TYPE = mime type or file extension of the supported file types
+```
+window.PlaylistParser(FILE,TYPE);
+```
+
+**Example**
+```
+window.PlaylistParser('','');
+```
+
+
+## Plugins
+- <a href="/wavesurfer.playlistparser.js">wavesurfer.playlistparser.js</a> - playlist plugin for the <a href="https://github.com/katspaugh/wavesurfer.js">WaveSurfer.js</a> library
