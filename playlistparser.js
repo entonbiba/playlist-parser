@@ -6,10 +6,18 @@ window.PlaylistParser = {
         this.params = params;
 
         // parse playlist and set params
-        this.playlistFile = this.params.playlistFile || null;
+        this.playlistFileGET = this.params.playlistFile || null;
         this.playlistType = this.params.playlistType || null;
 
-        if (this.playlistFile != null) {
+        if (this.playlistFileGET != null) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', this.playlistFileGET, true);
+            xhr.responseType = 'text';
+            if (xhr.status = 200) {
+                this.playlistFile = xhr.response;
+            } else {
+                this.playlistFile = '';
+            }
             this.parse();
         } else{
             throw new Error('No playlist file provided');
