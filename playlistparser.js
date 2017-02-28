@@ -15,10 +15,10 @@ window.PlaylistParser = {
             xhr.responseType = 'text';
             if (xhr.status = 200) {
                 this.playlistFile = xhr.response;
+                this.parse();
             } else {
-                this.playlistFile = '';
+                throw new Error('Error reading the playlist file');
             }
-            this.parse();
         } else{
             throw new Error('No playlist file provided');
         }
