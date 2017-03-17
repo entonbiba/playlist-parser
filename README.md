@@ -28,4 +28,4 @@ window.PlaylistParser('','');
 
 
 ## Plugins
-- <a href="/wavesurfer.playlistparser.js">wavesurfer.playlistparser.js</a> - playlist plugin for the <a href="https://github.com/katspaugh/wavesurfer.js">WaveSurfer.js</a> library <a href="http://codepen.io/entonbiba/pen/OpMQjR" target="_blank">view sample</a>
+- <a href="wavesurfer.playlistparser.js">wavesurfer.playlistparser.js</a> - playlist plugin for the <a href="https://github.com/katspaugh/wavesurfer.js">WaveSurfer.js</a> library <a href="http://codepen.io/entonbiba/pen/OpMQjR" target="_blank">view sample</a>
