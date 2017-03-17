@@ -1,6 +1,8 @@
 # playlist-parser
 JavaScript playlist parser for m3u, pls, smil and json files
 
+<img src="preview.png" />
+
 ## How to use
 **Include the playlistparser.js javascript file**<br/>
 ```
